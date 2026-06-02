@@ -194,9 +194,9 @@ opacity:1;
 
 <img src="logo.png" alt="Logo MI Salafiyah Kranggan" class="logo">
 
-<h1>🎓 PENGUMUMAN KELULUSAN</h1>
+<h1>👨‍🎓 PORTAL SISWA</h1>
 <h2>MI SALAFIYAH KRANGGAN</h2>
-<p class="subtitle">Tahun Pelajaran 2025/2026</p>
+<p class="subtitle">Login Menggunakan NISN</p>
 
 <div id="countdownArea">
 <h3>Pengumuman Akan Dibuka Dalam</h3>
@@ -204,10 +204,10 @@ opacity:1;
 </div>
 
 <div id="cekArea" style="display:none;">
-<input type="text" id="nisn" placeholder="Masukkan NISN">
+<input type="text" id="nisn" placeholder="Masukkan NISN Anda">
 
 <button onclick="cekKelulusan()">
-Lihat Kelulusan
+Login
 </button>
 </div>
 
@@ -1043,7 +1043,7 @@ hasil.style.display="block";
 
 hasil.innerHTML = `
 
-<h2>HASIL KELULUSAN</h2>
+<h2>LOGIN BERHASIL</h2>
 
 <div class="data">
 
@@ -1051,32 +1051,16 @@ hasil.innerHTML = `
 
 <b>NISN :</b> ${data.nisn}<br><br>
 
-<b>Status :</b>
-<span class="${statusClass}">
-${data.status}
-</span>
-
-${data.status=="LULUS" ? `
-<div class="ucapan">
-🎉 Selamat anda telah dinyatakan lulus dengan nilai:
+<div style="
+background:#d1e7dd;
+color:#0f5132;
+padding:15px;
+border-radius:10px;
+font-weight:bold;
+text-align:center;
+">
+✅ Selamat Datang di Portal Siswa MI Salafiyah Kranggan
 </div>
-` : `
-<div style="color:red;font-weight:bold;font-size:20px;">
-Tetap Semangat dan Jangan Menyerah
-</div>
-`}
-
-<br>
-
-<table class="nilai-table">
-<tr>
-<th>Mata Pelajaran</th>
-<th>Nilai</th>
-</tr>
-
-${daftarNilai}
-
-</table>
 
 </div>
 
